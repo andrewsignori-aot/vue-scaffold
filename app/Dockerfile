@@ -1,5 +1,7 @@
 FROM registry.access.redhat.com/ubi8/nodejs-12:1 as builder
 
+ENV VUE_APP_TITLE=Test
+
 COPY ./package*.json ./
 RUN npm ci
 COPY . ./
