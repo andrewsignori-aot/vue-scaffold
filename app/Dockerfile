@@ -11,4 +11,4 @@ RUN npm i -g serve
 COPY --from=builder /opt/app-root/src/dist .
 COPY --from=builder /opt/app-root/src/serve.json .
 
-CMD ["sh", "-c","serve", "-p", "$PORT", "-s", "."]
+CMD ["sh", "-c","serve", "-p", "80", "-s", "."]
