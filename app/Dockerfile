@@ -1,6 +1,6 @@
 FROM registry.access.redhat.com/ubi8/nodejs-12:1 as builder
 
-ENV VUE_APP_TITLE=Test
+ENV VUE_APP_API_URL=http://myApi.endpoint.com:3000
 
 COPY ./package*.json ./
 RUN npm ci
